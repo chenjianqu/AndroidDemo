@@ -55,6 +55,9 @@ public class OKHttpActivity extends Activity implements View.OnClickListener {
      * post请求
      */
     private static final int POST = 2;
+
+    private String file_tag="myfile";
+
     private static final String TAG = OKHttpActivity.class.getSimpleName();
     private Button btn_get_post;
     private TextView tv_result;
@@ -65,6 +68,10 @@ public class OKHttpActivity extends Activity implements View.OnClickListener {
     private Button btn_image;
     private Button btn_image_list;
     private ImageView iv_icon;
+
+    Button btn_pause;
+    Button btn_continue;
+    Button btn_cancel;
 
     VideoView videoView;
 
@@ -103,6 +110,10 @@ public class OKHttpActivity extends Activity implements View.OnClickListener {
         btn_image_list = (Button) findViewById(R.id.btn_image_list);
         videoView = findViewById(R.id.videoView);
 
+        btn_pause = findViewById(R.id.btn_pause_download);
+        btn_continue = findViewById(R.id.btn_continue_download);
+        btn_cancel = findViewById(R.id.btn_cancel);
+
         //设置点击事件
         btn_get_post.setOnClickListener(this);
         btn_get_okhttputils.setOnClickListener(this);
@@ -110,6 +121,18 @@ public class OKHttpActivity extends Activity implements View.OnClickListener {
         btn_uploadfile.setOnClickListener(this);
         btn_image.setOnClickListener(this);
         btn_image_list.setOnClickListener(this);
+
+        btn_pause.setOnClickListener((view)->{
+        });
+
+        btn_continue.setOnClickListener(view -> {
+
+        });
+
+        btn_cancel.setOnClickListener(view -> {
+
+        });
+
 
         /**
          * Android6.0之后，Google为Android加入了运行时申请权限的机制，
@@ -163,7 +186,9 @@ public class OKHttpActivity extends Activity implements View.OnClickListener {
                 getDataPostByOkhttpUtils();
                 break;
             case R.id.btn_downloadfile://下载文件
-                downloadFile();
+                //downloadFile("okhttp-utils-test.mp4");
+                Intent intent = new Intent(OKHttpActivity.this,OKHttpDownloadActivity.class);
+                startActivity(intent);
                 break;
             case R.id.btn_uploadfile://文件上传
                 multiFileUpload();
@@ -172,8 +197,8 @@ public class OKHttpActivity extends Activity implements View.OnClickListener {
                 getImage();
                 break;
             case R.id.btn_image_list://请求列表中的图片
-                Intent intent = new Intent(OKHttpActivity.this,OKHttpListActivity.class);
-                startActivity(intent);
+                Intent intent1 = new Intent(OKHttpActivity.this,OKHttpListActivity.class);
+                startActivity(intent1);
                 break;
         }
     }
@@ -337,15 +362,16 @@ public class OKHttpActivity extends Activity implements View.OnClickListener {
     /**
      * 使用okhttp-utils下载大文件
      */
-    public void downloadFile()
+    public void downloadFile(String file_name)
     {
         String url = "http://vfx.mtime.cn/Video/2016/07/24/mp4/160724055620533327_480.mp4";
         OkHttpUtils//
                 .get()//
-                .url(url)//
+                .url(url)
+                .tag(file_tag)
                 .build()//
                 .execute(new FileCallBack(Environment.getExternalStorageDirectory().getAbsolutePath(),
-                        "okhttp-utils-test.mp4") {
+                        file_name) {
 
                     @Override
                     public void onBefore(Request request, int id)

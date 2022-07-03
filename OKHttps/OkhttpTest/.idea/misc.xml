@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Codes/Android/AndroidDemo/OKHttps/OkhttpTest/app/src/main/res/layout/activity_main.xml" value="0.20425724637681159" />
+        <entry key="..\:/Codes/Android/AndroidDemo/OKHttps/OkhttpTest/app/src/main/res/layout/activity_okhttp.xml" value="0.26875" />
+        <entry key="..\:/Codes/Android/AndroidDemo/OKHttps/OkhttpTest/app/src/main/res/layout/activity_okhttp_download.xml" value="0.20425724637681159" />
         <entry key="..\:/Codes/Android/OkhttpTest/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
         <entry key="..\:/Codes/Android/OkhttpTest/app/src/main/res/layout/activity_okhttp.xml" value="0.23822463768115942" />
         <entry key="..\:/Codes/Android/OkhttpTest/app/src/main/res/layout/activity_okhttplist.xml" value="0.23822463768115942" />
