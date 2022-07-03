@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/opt_menu_blue"
+        android:title="@string/font_blue" />
+
+    <item android:id="@+id/opt_menu_red"
+        android:title="@string/font_red"
+         />
+
+    <item android:id="@+id/opt_menu_green"
+        android:title="@string/font_green"
+         />
+
+    <item android:id="@+id/opt_menu_yellow"
+        android:title="@string/font_yellow"
+       />
+
+    <item android:id="@+id/opt_menu_gray"
+        android:title="@string/font_gray"
+       />
+
+    <item android:id="@+id/opt_menu_cyan"
+        android:title="@string/font_cyan"
+        />
+
+    <item android:id="@+id/opt_menu_black"
+        android:title="@string/font_black"
+        />
+
+</menu>

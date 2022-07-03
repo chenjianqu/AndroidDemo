@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/sub_menu_colour" android:title="变颜色~">
+        <menu>
+            <group android:checkableBehavior = "none">
+                <item android:id="@+id/sub_menu_colour_blue" android:title="蓝色"/>
+                <item android:id="@+id/sub_menu_colour_green" android:title="绿色"/>
+                <item android:id="@+id/sub_menu_colour_red" android:title="红色"/>
+                <item android:id="@+id/sub_menu_colour_yellow" android:title="黄色"/>
+            </group>
+        </menu>
+    </item>
+    <item android:id="@+id/sub_menu_font_size" android:title="变字体大小~">
+        <menu>
+            <group android:checkableBehavior = "none">
+                <item android:id="@+id/sub_menu_font_size_10sp" android:title = "10sp"/>
+                <item android:id="@+id/sub_menu_font_size_30sp" android:title = "30sp"/>
+                <item android:id="@+id/sub_menu_font_size_50sp" android:title = "50sp"/>
+                <item android:id="@+id/sub_menu_font_size_70sp" android:title = "70sp"/>
+            </group>
+        </menu>
+    </item>
+    <item android:id="@+id/sub_menu_text" android:title="变文字~">
+        <menu>
+            <group android:checkableBehavior = "none">
+                <item android:id="@+id/sub_menu_text_hello" android:title = "你好"/>
+                <item android:id="@+id/sub_menu_text_menu" android:title = "菜单"/>
+                <item android:id="@+id/sub_menu_text_MQ" android:title = "毛小钱"/>
+                <item android:id="@+id/sub_menu_text_div" android:title = "自定义"/>
+            </group>
+        </menu>
+    </item>
+</menu>

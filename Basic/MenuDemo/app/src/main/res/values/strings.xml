@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MenuDemo</string>
+    <string name="font_blue">蓝色</string>
+    <string name="font_green">绿色</string>
+    <string name="font_red">红色</string>
+    <string name="font_yellow">黄色</string>
+    <string name="font_gray">灰色</string>
+    <string name="font_black">黑色</string>
+    <string name="font_cyan">青色</string>
+</resources>
